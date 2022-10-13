@@ -1,0 +1,152 @@
+@charset "utf-8";
+/* CSS Document */
+.nav-btn {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.open-btn {
+	position: fixed;
+	top: 40px;
+	left: 10px;
+}
+
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 5vh;
+	transform: translateX(-100%);
+	transition: transform 0.3s ease-in-out;
+	background-color: #333;
+}
+
+.nav.visible {
+	transform: translateX(0);
+	height: 40vh;
+}
+
+.nav-white {
+	background-color: #fff;
+	width: 95%;
+	padding: 40px;
+	position: relative;
+	transition-delay: 0s;
+}
+
+.nav-white.visible {
+	transition-delay: 0.4s;
+}
+
+.close-btn {
+	opacity: 0.3;
+	position: absolute;
+	top: 40px;
+	right: 120px;
+}
+
+.list {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list li {
+	margin: 20px 0;
+}
+
+.list li a {
+	color: rgb(34, 31, 31);
+	font-size: 14px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.list ul {
+	list-style-type: none;
+	padding-left: 20px;
+}
+
+.form {
+	border: 1px solid #333;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+input,
+select,
+textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+}
+
+.container {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+	border-radius: 50%;
+}
+
+.container:hover input ~ .checkmark {
+	background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+	background-color: #2196f3;
+}
+
+.checkmark:after {
+	content: '';
+	position: absolute;
+	display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+	display: block;
+}
+
+.container .checkmark:after {
+	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+@media screen and (width: 390px) {
+	.form {
+		margin: 0 20px;
+	}
+}

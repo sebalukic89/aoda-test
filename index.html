@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="utf-8" />
+		<title>BMO - UI AODA Test</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/your-styles-here.css" />
+		<link rel="stylesheet" href="fonts/heebo.css" />
+	</head>
+	<body>
+		<div class="test-container">
+			<!-- <h1 class="test-heading">BMO Accessiblity Test for UI Devs</h1> -->
+			<header>
+				<!-- <h2 class="test-heading">Create an accessible navigation</h2> -->
+
+				<nav aria-labelledby="mainmenulabel">
+					<button
+						id="hamburger"
+						aria-expanded="false"
+						aria-controls="navigation-list"
+						class="nav-btn open-btn""
+						aria-label="Show Navigation Menu"
+						tabindex="0"
+					>
+						☰
+					</button>
+					<div id="navMenu" class="nav nav-white">
+						<button
+							id="closeNavMenu"
+							class="nav-btn close-btn"
+							aria-label="Hide Navigation Menu"
+						>
+							x
+						</button>
+
+						<ul role="menu" class="list">
+							<li role="menuitem"><a href="#home">Home</a></li>
+							<li role="menuitem"><a href="#about">About</a></li>
+							<li role="menuitem"><a href="#banking">Banking</a></li>
+							<li role="menuitem"><a href="#hockey">Hockey</a></li>
+							<li role="menuitem"><a href="#good-food">Good Food</a></li>
+							<li role="menuitem">
+								<a href="#ui-development">UI Development</a>
+							</li>
+							<li role="menuitem"><a href="#contact">Contact</a></li>
+						</ul>
+					</div>
+				</nav>
+			</header>
+			<main class="main-content" id="main-content">
+				<h2 class="test-heading">Create an accessible form</h2>
+				<h2 class="test-heading2">Text Inputs</h2>
+
+				<form method="POST" class="form">
+					<label for="text-input">Text Input</label><br>
+					<input type="text" id="text-input" name="text-input" placeholder="Create Text Input with label" aria-labelledby="text input" aria-describedby="text input" required aria-required="true"/><br>
+					<label for="number-input">Number Input</label><br>
+					<input type="number" id="number-input" name="number-input" placeholder="Create a Number input with label" aria-label="number input" aria-describedby="number input" required aria-required="true"/><br>
+					<label for="email-input">Email input</label><br>
+					<input type="email" id="email-input" name="email-input" placeholder="Create an Email with label" aria-label="email input" aria-describedby="email input" required aria-required="true"/><br>
+							
+					<h2 class="test-heading2">Radio Inputs</h2>
+						<!-- <input type="radio" /><span
+							>create a group of alteast 3 radio inputs with labels</span
+						><br> -->
+				
+							
+							<label for="html" class="container">HTML
+								<input type="radio" id="html" name="fav_language" value="HTML" role="radio" aria-labelledby="html" tabindex="0" focusable="true">
+								<span class="checkmark"></span>
+							</label><br>
+					
+							<label for="css" class="container">CSS
+								<input type="radio" id="css" name="fav_language" value="CSS" role="radio" aria-labelledby="css" tabindex="-1" >
+								<span class="checkmark"></span>
+							</label><br>
+						
+							<label for="javascript" class="container">JavaScript
+								<input type="radio" id="javascript" name="fav_language" value="JavaScript" role="radio" aria-labelledby="javascript" tabindex="-1">
+								<span class="checkmark"></span>
+							</label>
+	
+				<h2 class="test-heading2">Multiline Input</h2>
+				<!-- <input type="text" placeholder="Create Multiline input with label" /> -->
+				<textarea name="multiline" id="multiline" cols="30" rows="10" placeholder="Create Multiline input with label"></textarea>
+			</form>
+				<h2 class="test-heading">
+					Bonus Marks: Create an accessible modal with Keyboard Trap.(only if
+					everything else is complete)
+				</h2>
+				<button class="modal-trigger">Modal Trigger</button>
+				<div class="modal">
+					<button>Close Modal</button>
+					<div class="modal-header">
+						<div>
+							<h1>This is a modal title 1</h1>
+						</div>
+					</div>
+					<div class="modal-body">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+							enim ad minim veniam, quis nostrud exercitation ullamco laboris
+							nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore eu fugiat
+							nulla pariatur.
+						</p>
+					</div>
+				</div>
+				<div class="overlay"></div>
+			</main>
+			<footer>
+				<h1 class="test-heading">footer</h1>
+			</footer>
+		</div>
+		<script src="assets/js/jquery-1.11.3.min.js"></script>
+		<script src="js/your-js-here.js"></script>
+	</body>
+</html>
